@@ -21,7 +21,7 @@ if (navigator.geolocation) {
 
       const line3 = document.querySelector(".line-3");
       if (line3) {
-        line3.innerText = `-- Signal stronger in ${userLocation}. --`;
+        line3.innerText = `-- Signal stronger  ${userLocation}. --`;
       }
     } catch (error) {
       console.error("Location error:", error);
