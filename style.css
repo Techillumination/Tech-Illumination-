@@ -272,78 +272,48 @@ h1 {
     align-items: flex-start;
     gap: 10px;
   }
-     .body{
-      font-size: 7px;
+    @media (max-width: 600px) {
+  .nav {
+    flex-direction: column; /* Mobile par logs upar aur clock niche */
+    align-items: flex-start;
+    gap: 10px;
   }
-     .container {
-        margin-left: 30px; /* Reset desktop margin */
-        padding: 75px 24px 60px 0px;
-        text-align: left;
-        line-height:1.2;
-       
-          
-    }
-
-      .line, .clock {
-        padding: 0;
-        margin: 0;
-        left: 20px;
-        font-size: 12px;
-        position: fixed;
-    }
-     .clock {
-        margin-top:30px;
-        right: 20px;
-        left: auto;
-    }
-   
-    h1 {
-      
-        font-size: 32px; /* Smaller but bold for mobile */
-        margin-bottom: 20px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-  
+  .container{
+    margin-left:0;
+    padding:20px 20px 20px 20px;
+    text-align: left;
+    line-height: 0;
+  }
   .email-box {
-    display: flex;
-    flex-direction: row;        /* 🔥 SAME LINE */
-    align-items: center;
-    gap: 12px;
-    margin-top: 40px;
-  }
-
-    .email-box input {
-    flex: 1;                   /* input zyada space lega */
-    width: auto;
-    font-size: 15px;
-  }
-
-    
-  .email-box button {
-    width: auto;
-    white-space: nowrap;       /* text neeche nahi tootega */
-    font-size: 15px;
-    padding: 0;
-    color: #E1E1E1E5;
-  }
-
-    .quote {
-        margin: 40px 0;
-        padding-left: 15px;
+        display: flex;
+        flex-direction: row; /* Column ki jagah row rakha */
+        align-items: flex-end; /* Border-bottom ke sath align hoga */
+        gap: 9px;
+        margin-top: 40px;
+        left: 12px;
     }
-    .footer{
-      margin-top:50px;
-      padding: 0px;
     
-      /* 🔥 YE ADD KAREIN */
-  white-space: nowrap;
-  display: block;
-  width: 100%;
+    .email-box button {
+        width: auto;
+        white-space: nowrap; /* Button text wrap nahi hoga */
+        font-size: 14px;
+        padding-bottom: 5px;
+        color: #E1E1E1E5; /* Mobile par thoda bright dikhega */
+        margin-right: 80px;
+
     }
+    .subtitle {
+        font-size: 15px;
+        margin-right:111px;
+    }
+     h1 {
+        font-size: 28px;
+        margin-top: 15px;
+        margin-right:35px;
+    }
+
+
+}
 }
 
 @media (max-width: 768px) {
