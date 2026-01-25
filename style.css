@@ -447,3 +447,156 @@ h1 {
   width: 100%;
     }
 }
+/* ===============================
+   GLOBAL RESPONSIVE FIXES
+================================ */
+
+/* Fix dangerous body line-height */
+body {
+  line-height: normal;
+}
+
+/* Prevent horizontal scroll everywhere */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   DESKTOP (default stays same)
+================================ */
+
+
+/* ===============================
+   TABLET & BELOW (≤1024px)
+================================ */
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    padding: 80px 40px;
+    max-width: 100%;
+  }
+}
+
+
+/* ===============================
+   MOBILE FIX (≤768px)
+================================ */
+@media (max-width: 768px) {
+
+  /* NAV + SIGNAL */
+  .display-container {
+    font-size: 12px;
+  }
+
+  .line {
+    padding: 0;
+    left: 16px;
+    top: 10px;
+    width: auto;
+  }
+
+  .clock {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    padding: 0;
+    font-size: 11px;
+    width: auto;
+  }
+
+  /* MAIN CONTAINER */
+  .container {
+    position: relative;          /* 🔥 remove fixed */
+    margin: 0 auto;
+    padding: 120px 20px 40px;
+    line-height: 1.4;
+  }
+
+  /* PHASE LINE */
+  .phase {
+    white-space: normal;
+    padding-left: 0 !important;
+    margin-top: 20px !important;
+    font-size: 14px;
+  }
+
+  /* HEADLINE */
+  h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  /* SUBTITLE */
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .subtitle span {
+    line-height: 1.6;
+  }
+
+  /* QUOTE */
+  .quote {
+    margin: 32px 0;
+    padding-left: 14px;
+    line-height: 1.5;
+  }
+
+  /* EMAIL INPUT + BUTTON (SAME LINE) */
+  .email-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .email-box input {
+    flex: 1;
+    width: auto;
+    font-size: 14px;
+  }
+
+  .email-box button {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 40px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+
+/* ===============================
+   SMALL PHONES (≤420px) – Redmi 9 SAFE
+================================ */
+@media (max-width: 420px) {
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .email-box {
+    gap: 10px;
+  }
+
+  .email-box button {
+    font-size: 13px;
+  }
+
+  .clock {
+    font-size: 10px;
+  }
+}
