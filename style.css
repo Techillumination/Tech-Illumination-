@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0b;
+  color: #ffffff;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+   font-family: 'JetBrains Mono', monospace;
+   line-height:100px;
+   overflow-x: hidden;
+}
+
+/* responsive for laptop */
+
+.display-container {
+            position: relative;
+            height: 30px; /* Fixed height for the typing area */
+            font-weight: 400;
+            font-size: 18.34px;
+            color: #324A32;
+
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            opacity: 0; /* Initially hidden */
+            padding-top: 67PX;
+            padding-Left: 120px;
+        }
+
+        /* LINE 1: System Activate.. */
+        .line-1 {
+            animation: 
+                typing 1s steps(20) 0s forwards, 
+                blink 0.5s step-end infinite,
+                fadeOut 0.1s forwards 2s; /* 2 second baad gayab */
+        }
+
+        /* LINE 2: High traffic window */
+        .line-2 {
+            animation: 
+                typing 1s steps(20) 2.1s forwards, 
+                blink 0.5s step-end infinite,
+                fadeOut 0.1s forwards 4.1s; /* 4.1 second baad gayab */
+        }
+
+        /* LINE 3: -- Signal stronger in Jaipur. */
+        .line-3 {
+          
+            animation: 
+                typing 1.5s steps(30) 4.2s forwards, 
+                blink 0.5s step-end infinite;
+
+            /* Ye line last hai toh ruki rahegi */
+        }
+         .line-3{
+  color: #324A32; /* Your signal green color */
+  
+  /* Horizontal | Vertical | Blur Radius | Color */
+  text-shadow: 0 0 1px rgba(50, 74, 50, 1), 
+               0 0 10px rgba(0, 255, 65, 0.4);
+               opacity: 55px;
+}
+       
+
+        /* KEYFRAMES */
+
+        @keyframes typing {
+            from { width: 0; opacity: 1; }
+            to { width: 100%; opacity: 1; max-width: fit-content; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; visibility: visible; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+.container {
+  /* padding-left: 240px; */
+  margin-left: 500px;
+  padding: 90px;
+  max-width: 900px;
+
+}
+.clock {
+  color: #324A32;
+  font-size:18.36px;
+  letter-spacing: 0%;
+  background: transparent;
+  position: fixed;
+  top: 20px;
+  right: 0;
+  height: 30px;
+  width: 87.27px;
+ padding-top: 67PX;
+ padding-right: 300px;
+   color: #324A32; /* Your signal green color */
+  
+  /* Horizontal | Vertical | Blur Radius | Color */
+  text-shadow: 0 0 1px rgba(50, 74, 50, 1), 
+               0 0 10px rgba(0, 255, 65, 0.4);
+               opacity:55px;
+}
+
+@keyframes signalMove {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+} */
+
+
+/* MAIN TEXT */
+.phase {
+  color: #FFFFFF66;
+  font-weight: 400;
+  letter-spacing: 0.08em; /* 8% */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16.5px;
+  margin-top: 64px;
+  /* Margin ki jagah Padding use karein */
+  padding-left: 40px !important; 
+  display: block; /* Ensure text moves like a block */
+}
+
+/* Dot ko bada karne ke liye */
+.phase span {
+  display: inline-block;
+  transform: scale(2); /* Isse dot bada ho jayega bina text ko disturb kiye */
+  margin-right: 12px;  /* Dot aur text ke beech gap */
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 42.34px;
+  color:#E1E1E1BF;
+  font-style:bold;
+  letter-spacing: -4%;
+  margin-bottom: 20px;
+  
+}
+.subtitle{
+  color:#E1E1E126;
+  line-height: 1.2;
+}
+.subtitle span {
+  color:#E1E1E1E5;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  line-height:2;
+  margin-bottom:12px;
+  margin-right:12px;
+}
+
+.quote {
+  line-height:25px;
+  border-left: 2px solid #333;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top:64PX;
+  
+}
+
+.quote span {
+  color:#E1E1E133;
+  font-size: 15.68px;
+}
+
+.email-box {
+  display: flex;
+  gap: 20px;
+  margin-top:67px;
+}
+
+
+.email-box input {
+   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: white;
+  width: 320px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.email-box button {
+  background: none;
+  border: none;
+  color:#E1E1E14D;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  font-size: 16.5px;
+}
+
+.email-box button:hover {
+  color: white;
+}
+
+
+.footer {
+  font-family: 'JetBrains Mono', monospace;
+  color: #324a32;
+  font-size: 13px;
+   color: #324A32; /* Your signal green color */
+  
+  /* Horizontal | Vertical | Blur Radius | Color */
+  text-shadow: 0 0 1px rgba(50, 74, 50, 1), 
+               0 0 10px rgba(0, 255, 65, 0.4);
+   opacity:55px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column; /* Mobile par logs upar aur clock niche */
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+    /* 1. Container ki padding kam ki taaki phase line upar jaye */
+    .container {
+        margin-left: 0; 
+        padding: 40px 20px 20px 20px; /* Top padding 90px se 40px kar di */
+        text-align: left;
+        line-height: 1.4;
+    }
+
+    /* 2. Phase text ko thoda aur upar shift karne ke liye */
+    .phase {
+        margin-top: 20px !important; /* Margin kam kar di */
+        padding-left: 0 !important;
+    }
+
+    /* 3. Email Input aur Button ko ek line mein laane ke liye */
+    .email-box {
+        display: flex;
+        flex-direction: row; /* Column ki jagah row rakha */
+        align-items: flex-end; /* Border-bottom ke sath align hoga */
+        gap: 10px;
+        margin-top: 40px;
+    }
+
+    .email-box input {
+        flex: 1; /* Input jitni jagah bachi hai le lega */
+        width: auto; 
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    .email-box button {
+        width: auto;
+        white-space: nowrap; /* Button text wrap nahi hoga */
+        font-size: 14px;
+        padding-bottom: 5px;
+        color: #E1E1E1E5; /* Mobile par thoda bright dikhega */
+    }
+
+    /* Clock aur Signal lines ke liye chota fix */
+    .line, .clock {
+        padding: 0;
+        margin: 0;
+        top: 15px;
+        font-size: 11px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+     .container {
+        margin-left: 30px; /* Reset desktop margin */
+        padding: 75px 24px 60px 0px;
+        text-align: left;
+        line-height:1.2;
+        
+          
+    }
+
+      .line, .clock {
+        padding: 0;
+        margin: 0;
+        left: 20px;
+        font-size: 12px;
+        position: fixed;
+    }
+     .clock {
+        margin-top:30px;
+        right: 20px;
+        left: auto;
+    }
+   
+    h1 {
+      
+        font-size: 32px; /* Smaller but bold for mobile */
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+  
+  .email-box {
+    display: flex;
+    flex-direction: row;        /* 🔥 SAME LINE */
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+    .email-box input {
+    flex: 1;                   /* input zyada space lega */
+    width: auto;
+    font-size: 15px;
+  }
+
+    
+  .email-box button {
+    width: auto;
+    white-space: nowrap;       /* text neeche nahi tootega */
+    font-size: 15px;
+    padding: 0;
+    color: #E1E1E1E5;
+  }
+
+    .quote {
+        margin: 40px 0;
+        padding-left: 15px;
+    }
+    .footer{
+      margin-top:50px;
+      padding: 0px;
+    }
+}
