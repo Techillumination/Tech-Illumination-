@@ -303,15 +303,15 @@ h1 {
      h1 {
         font-size: 28px;
         margin-top: 15px;
-        margin-right:35px;
+        
     }
+ 
 
 
 }
 @media (max-width: 768px) {
     /* 1. Container ki padding kam ki taaki phase line upar jaye */
     .container {
-        margin-left: 0; 
         padding: 40px 20px 20px 20px; /* Top padding 90px se 40px kar di */
         text-align: left;
         line-height:0;
@@ -467,6 +467,7 @@ h1 {
   }
 
   h1 {
+    
     font-size: 36px;
     margin-top: 20px;
     line-height: 1.1;
@@ -499,7 +500,9 @@ h1 {
   }
 
   .footer {
+  
     margin-top: 60px;
     font-size: 12px;
   }
+  
 }
