@@ -272,12 +272,6 @@ h1 {
     align-items: flex-start;
     gap: 10px;
   }
-    @media (max-width: 600px) {
-  .nav {
-    flex-direction: column; /* Mobile par logs upar aur clock niche */
-    align-items: flex-start;
-    gap: 10px;
-  }
   .container{
     margin-left:0;
     padding:20px 20px 20px 20px;
@@ -314,8 +308,6 @@ h1 {
 
 
 }
-}
-
 @media (max-width: 768px) {
     /* 1. Container ki padding kam ki taaki phase line upar jaye */
     .container {
@@ -369,6 +361,14 @@ h1 {
     h1 {
         font-size: 28px;
         margin-top: 15px;
+    }
+    .footer{
+      margin-top:50px;
+      padding:0px;
+      /* 🔥 YE ADD KAREIN */
+    white-space: nowrap;
+  display: block;
+  width: 100%;
     }
 }
 
@@ -447,29 +447,59 @@ h1 {
   width: 100%;
     }
 }
-
-/* ===============================
-   SMALL PHONES (≤420px) – Redmi 9 SAFE
-================================ */
-@media (max-width: 420px) {
-
-  h1 {
-    font-size: 26px;
+/* --- 480px (Large Mobile/Small Tablet) Optimizations --- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    margin-left: 0;
+    padding: 100px 30px 40px 30px; /* Top padding for the animated logs */
+    max-width: 100%;
+    line-height: 1.4;
   }
 
-  .subtitle {
+  .line {
+    padding-left: 30px;
     font-size: 14px;
   }
 
+  .clock {
+    padding-right: 30px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .quote {
+    margin-top: 40px;
+    line-height: 1.5;
+  }
+
   .email-box {
-    gap: 10px;
+    flex-direction: column; /* Tablet-size mobile par stacked inputs better lagte hain */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .email-box input {
+    width: 100%; /* Input full width ho jayega */
+    max-width: 350px;
+    border-bottom: 1px solid #ffffff44;
   }
 
   .email-box button {
-    font-size: 13px;
+    font-size: 18px;
+    padding-left: 0;
   }
 
-  .clock {
-    font-size: 10px;
+  .footer {
+    margin-top: 60px;
+    font-size: 12px;
   }
 }
