@@ -365,7 +365,7 @@ h1 {
     }
     .footer{
       margin-top:50px;
-      padding:0px;
+     
       /* 🔥 YE ADD KAREIN */
     white-space: nowrap;
   display: block;
@@ -429,7 +429,7 @@ h1 {
   .email-box button {
     width: auto;
     white-space: nowrap;       /* text neeche nahi tootega */
-    font-size: 15px;
+    font-size: 12px;
     padding: 0;
     color: #E1E1E1E5;
   }
@@ -445,7 +445,6 @@ h1 {
     .footer{
       margin-top:50px;
       padding: 0px;
-    
       /* 🔥 YE ADD KAREIN */
   white-space: nowrap;
   display: block;
