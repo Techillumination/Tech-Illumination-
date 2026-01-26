@@ -277,6 +277,7 @@ h1 {
     padding:20px 20px 20px 20px;
     text-align: left;
     line-height: 0;
+   
   }
   .email-box {
         display: flex;
@@ -406,7 +407,7 @@ h1 {
     }
 
     .subtitle {
-        font-size: 16px;
+        font-size: 11px;
     }
 
   
@@ -436,6 +437,10 @@ h1 {
     .quote {
         margin: 40px 0;
         padding-left: 15px;
+        font-size: 11px;
+    }
+    .quote span{
+      font-size: 11px;
     }
     .footer{
       margin-top:50px;
