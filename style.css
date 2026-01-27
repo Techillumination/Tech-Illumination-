@@ -127,7 +127,7 @@ body {
   font-size:18.36px;
   letter-spacing: 0%;
   background: transparent;
-  position: fixed;
+  margin-left: 90%;
   top: 20px;
   right: 0;
   height: 30px;
@@ -406,7 +406,7 @@ h1 {
    
     h1 {
       
-        font-size: 32px; /* Smaller but bold for mobile */
+        font: size 28px; /* Smaller but bold for mobile */
         margin-bottom: 20px;
     }
 
