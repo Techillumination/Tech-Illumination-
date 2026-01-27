@@ -414,7 +414,7 @@ h1 {
     }
 
     .subtitle {
-        font-size: 11px;
+        font-size: 14px;
     }
 
   
@@ -436,18 +436,19 @@ h1 {
   .email-box button {
     width: auto;
     white-space: nowrap;       /* text neeche nahi tootega */
-    font-size: 12px;
+    font-size: 14px;
     padding: 0;
     color: #E1E1E1E5;
+    
   }
 
     .quote {
         margin: 40px 0;
         padding-left: 15px;
-        font-size: 11px;
+        font-size: 14px;
     }
     .quote span{
-      font-size: 11px;
+      font-size: 14px;
     }
     .footer{
       margin-top:50px;
@@ -456,7 +457,7 @@ h1 {
   white-space: nowrap;
   display: block;
   width: 100%;
-  font-size: 11px;
+  font-size: 14px;
     }
 }
 /* --- 480px (Large Mobile/Small Tablet) Optimizations --- */
@@ -514,10 +515,9 @@ h1 {
   .footer {
     margin-left: 12px;
     margin-top: 60px;
-    font-size: 11px;
+    font-size: 14px;
   }
-  .clock{
-    position: fixed;
-  }
+ 
+  
   
 }
