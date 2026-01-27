@@ -12,12 +12,13 @@ body {
    font-family: 'JetBrains Mono', monospace;
    line-height:100px;
    overflow-x: hidden;
+   position: fixed;
 }
 
 /* responsive for laptop */
 
 .display-container {
-            position: relative;
+            position:relative;
             height: 30px; /* Fixed height for the typing area */
             font-weight: 400;
             font-size: 18.34px;
@@ -263,6 +264,7 @@ h1 {
   .container {
     margin: 60px auto;
     padding: 0 40px;
+    position: fixed;
   }
 }
 
@@ -357,6 +359,7 @@ h1 {
         margin: 0;
         top: 15px;
         font-size: 11px;
+       
     }
     
     h1 {
