@@ -12,7 +12,7 @@ body {
    font-family: 'JetBrains Mono', monospace;
    line-height:100px;
    overflow-x: hidden;
-   position: fixed;
+ 
 }
 
 /* responsive for laptop */
@@ -308,6 +308,9 @@ h1 {
         margin-top: 15px;
         
     }
+    .clock{
+      position: fixed;
+    }
  
 
 
@@ -368,8 +371,6 @@ h1 {
     }
     .footer{
       margin-top:50px;
-     
-      /* 🔥 YE ADD KAREIN */
     white-space: nowrap;
   display: block;
   width: 100%;
@@ -452,6 +453,7 @@ h1 {
   white-space: nowrap;
   display: block;
   width: 100%;
+  font-size: 11px;
     }
 }
 /* --- 480px (Large Mobile/Small Tablet) Optimizations --- */
@@ -507,9 +509,9 @@ h1 {
   }
 
   .footer {
-  
+    margin-left: 12px;
     margin-top: 60px;
-    font-size: 12px;
+    font-size: 11px;
   }
   
 }
