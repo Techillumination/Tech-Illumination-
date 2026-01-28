@@ -517,7 +517,27 @@ h1 {
     margin-top: 60px;
     font-size: 14px;
   }
+
+  /* ===== MOBILE SAFE WIDTH FIX ===== */
+
+html, body {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Keep main container inside safe width */
+.container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
  
   
   
 }
+
