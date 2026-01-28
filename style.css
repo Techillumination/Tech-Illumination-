@@ -536,8 +536,28 @@ html, body {
   padding: 0 16px;
 }
 
+  /* ===== MOBILE OVERRIDE FIX (FINAL) ===== */
+
+@media (max-width: 768px) {
+
+  body {
+    line-height: 1.6; /* 100px was breaking layout */
+  }
+
+  .container {
+    position: relative !important;
+    margin: 40px auto !important;
+    margin-left: auto !important;
+    padding: 0 16px !important;
+    max-width: 520px !important;
+    width: 100% !important;
+  }
+
+}
+
  
   
   
 }
+
 
