@@ -27,104 +27,60 @@ body {
   margin-top: 20px;
   font-size: 14px;
   color: #324A32;
+  height: 32px; /* ONE LINE ONLY */
 }
 
 /* =========================
-   TERMINAL LINES (BASE)
+   TERMINAL LINE (BASE)
 ========================= */
 .line {
+  position: absolute;
+  top: 0;
+  left: 0;
   white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  width: 100%;
+  clip-path: inset(0 100% 0 0);
   text-shadow:
     0 0 1px rgba(50,74,50,1),
     0 0 10px rgba(0,255,65,0.4);
 }
 
 /* =========================
-   DESKTOP (ABSOLUTE + WIDTH TYPING)
+   SEQUENTIAL REPLACE ANIMATION
 ========================= */
-@media (min-width: 769px) {
 
-  .display-container {
-    height: 90px;
-  }
+/* LINE 1 */
+.line-1 {
+  animation:
+    reveal 1.2s steps(30) forwards,
+    hide 0.1s forwards 3.2s;
+}
 
-  .line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 0;
-    opacity: 0;
-  }
+/* LINE 2 */
+.line-2 {
+  animation:
+    reveal 1.2s steps(30) 3.3s forwards,
+    hide 0.1s forwards 6.2s;
+}
 
-  .line-1 {
-    width: 100%;
-    opacity: 1;
-    animation: fadeOut 0.1s forwards 5s;
-  }
-
-  .line-2 {
-    animation:
-      typing 1s steps(20) 5.1s forwards,
-      fadeOut 0.1s forwards 7.3s;
-  }
-
-  .line-3 {
-    animation:
-      typing 1.5s steps(30) 7.5s forwards;
-  }
-
-  @keyframes typing {
-    from { width: 0; opacity: 1; }
-    to   { width: 100%; opacity: 1; }
-  }
-
-  @keyframes fadeOut {
-    to { opacity: 0; visibility: hidden; }
-  }
+/* LINE 3 (STAYS) */
+.line-3 {
+  animation:
+    reveal 1.4s steps(40) 6.3s forwards;
 }
 
 /* =========================
-   MOBILE (STACKED + CLIP-PATH TYPING)
+   ANIMATIONS
 ========================= */
-@media (max-width: 768px) {
+@keyframes reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 1; }
+  to   { clip-path: inset(0 0 0 0); opacity: 1; }
+}
 
-  .display-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .line {
-    position: relative;
-    opacity: 1;
-    clip-path: inset(0 100% 0 0);
-  }
-
-  .line-1 {
-    animation:
-      reveal 1.1s steps(30) forwards,
-      hide 0.1s forwards 3.2s;
-  }
-
-  .line-2 {
-    animation:
-      reveal 1.1s steps(30) 3.35s forwards,
-      hide 0.1s forwards 6s;
-  }
-
-  .line-3 {
-    animation:
-      reveal 1.3s steps(40) 6.15s forwards;
-  }
-
-  @keyframes reveal {
-    to { clip-path: inset(0 0 0 0); }
-  }
-
-  @keyframes hide {
-    to { opacity: 0; }
-  }
+@keyframes hide {
+  to { opacity: 0; }
 }
 
 /* =========================
