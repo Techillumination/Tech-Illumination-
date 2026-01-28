@@ -1,11 +1,15 @@
-/* ===== RESET ===== */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
+/* =========================
+   BODY
+========================= */
 body {
   background: #0b0b0b;
   color: #ffffff;
@@ -15,26 +19,101 @@ body {
   line-height: 1.6;
 }
 
-/* ===== CONTAINER (DESKTOP FIRST) ===== */
+/* =========================
+   TERMINAL DISPLAY (TOP)
+========================= */
+.display-container {
+  position: relative;
+  height: 90px;
+  font-size: 14px;
+  color: #324A32;
+  margin-top: 20px;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  text-shadow:
+    0 0 1px rgba(50,74,50,1),
+    0 0 10px rgba(0,255,65,0.4);
+}
+
+/* LINE 1 */
+.line-1 {
+  opacity: 1;
+  width: 100%;
+  animation: fadeOut 0.1s forwards 5s;
+}
+
+/* LINE 2 */
+.line-2 {
+  animation:
+    typing 1s steps(20) 5.1s forwards,
+    fadeOut 0.1s forwards 7.3s;
+}
+
+/* LINE 3 */
+.line-3 {
+  animation:
+    typing 1.5s steps(30) 7.5s forwards;
+}
+
+/* Dots animation */
+.dots::after {
+  content: '';
+  animation: dotAnimation 1.5s infinite;
+}
+
+/* =========================
+   TERMINAL ANIMATIONS
+========================= */
+@keyframes typing {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes dotAnimation {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
+}
+
+/* =========================
+   CONTAINER
+========================= */
 .container {
   max-width: 900px;
   margin: 80px auto;
   padding: 90px;
-  position: relative; /* ❌ fixed hata diya */
+  position: relative;
 }
 
-/* ===== CLOCK ===== */
+/* =========================
+   CLOCK
+========================= */
 .clock {
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 14px;
   color: #324A32;
-  text-shadow: 0 0 1px rgba(50,74,50,1),
-               0 0 10px rgba(0,255,65,0.4);
+  text-shadow:
+    0 0 1px rgba(50,74,50,1),
+    0 0 10px rgba(0,255,65,0.4);
 }
 
-/* ===== PHASE TEXT ===== */
+/* =========================
+   PHASE TEXT
+========================= */
 .phase {
   color: #FFFFFF66;
   letter-spacing: 0.08em;
@@ -43,7 +122,9 @@ body {
   white-space: nowrap;
 }
 
-/* ===== HEADINGS ===== */
+/* =========================
+   HEADINGS
+========================= */
 h1 {
   font-family: 'Inter', sans-serif;
   font-size: 42px;
@@ -61,7 +142,9 @@ h1 {
   font-weight: 600;
 }
 
-/* ===== QUOTE ===== */
+/* =========================
+   QUOTE
+========================= */
 .quote {
   margin-top: 64px;
   padding-left: 20px;
@@ -69,7 +152,9 @@ h1 {
   font-size: 15px;
 }
 
-/* ===== EMAIL BOX ===== */
+/* =========================
+   EMAIL BOX
+========================= */
 .email-box {
   display: flex;
   align-items: center;
@@ -103,31 +188,48 @@ h1 {
   color: white;
 }
 
-/* ===== FOOTER ===== */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   margin-top: 60px;
   font-size: 13px;
   color: #324A32;
-  text-shadow: 0 0 1px rgba(50,74,50,1),
-               0 0 10px rgba(0,255,65,0.4);
+  text-shadow:
+    0 0 1px rgba(50,74,50,1),
+    0 0 10px rgba(0,255,65,0.4);
 }
 
-/* ================================================= */
-/* ================= MOBILE FIX ==================== */
-/* ================================================= */
-
+/* =========================
+   MOBILE (SAFE FIX)
+========================= */
 @media (max-width: 768px) {
-
-  body {
-    line-height: 1.6;
-  }
 
   .container {
     width: 100%;
-    max-width: 520px;   /* 🔥 SAME ON ALL PHONES */
+    max-width: 520px;
     margin: 40px auto;
-    padding: 0 16px;
-    position: relative; /* ❌ fixed kabhi nahi */
+    padding: 20px 16px;
+  }
+
+  .display-container {
+    height: auto;
+  }
+
+  .line {
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+    opacity: 1;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .clock {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
   }
 
   h1 {
@@ -159,54 +261,8 @@ h1 {
     font-size: 14px;
   }
 
-  .clock {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    font-size: 12px;
-  }
-
   .footer {
     white-space: nowrap;
     font-size: 13px;
   }
 }
-/* ===============================
-   MOBILE FIX — TERMINAL TEXT
-   =============================== */
-@media (max-width: 768px) {
-
-  /* NAV / TOP TEXT FIX */
-  .display-container {
-    position: relative !important;
-    margin-top: 20px;
-  }
-
-  .line {
-    display: block;
-    line-height: 1.6 !important;
-    margin-bottom: 6px;
-    color: #00ff9c; /* terminal green */
-    white-space: normal !important;
-  }
-
-  .dots {
-    display: inline-block;
-  }
-
-  /* MAIN CONTENT CONTAINER FIX */
-  .container {
-    position: relative !important;
-    margin: 40px auto !important;
-    margin-left: auto !important;
-    padding: 20px 16px !important;
-    max-width: 520px !important;
-    width: 100% !important;
-    line-height: 1.5 !important;
-  }
-
-  body {
-    line-height: 1.6 !important;
-  }
-}
-
