@@ -171,3 +171,42 @@ h1 {
     font-size: 13px;
   }
 }
+/* ===============================
+   MOBILE FIX — TERMINAL TEXT
+   =============================== */
+@media (max-width: 768px) {
+
+  /* NAV / TOP TEXT FIX */
+  .display-container {
+    position: relative !important;
+    margin-top: 20px;
+  }
+
+  .line {
+    display: block;
+    line-height: 1.6 !important;
+    margin-bottom: 6px;
+    color: #00ff9c; /* terminal green */
+    white-space: normal !important;
+  }
+
+  .dots {
+    display: inline-block;
+  }
+
+  /* MAIN CONTENT CONTAINER FIX */
+  .container {
+    position: relative !important;
+    margin: 40px auto !important;
+    margin-left: auto !important;
+    padding: 20px 16px !important;
+    max-width: 520px !important;
+    width: 100% !important;
+    line-height: 1.5 !important;
+  }
+
+  body {
+    line-height: 1.6 !important;
+  }
+}
+
