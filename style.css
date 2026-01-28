@@ -21,6 +21,7 @@ body {
 
 /* =========================
    TERMINAL DISPLAY (TOP)
+   Desktop-first animations (kept intact)
 ========================= */
 .display-container {
   position: relative;
@@ -30,6 +31,7 @@ body {
   margin-top: 20px;
 }
 
+/* Default line style (desktop) — absolute so lines can overlap while animating */
 .line {
   position: absolute;
   top: 0;
@@ -41,29 +43,33 @@ body {
   text-shadow:
     0 0 1px rgba(50,74,50,1),
     0 0 10px rgba(0,255,65,0.4);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
-/* LINE 1 */
+/* Desktop timeline (unchanged) */
+/* Line 1 (desktop): visible immediately, then fades out after 5s */
 .line-1 {
   opacity: 1;
   width: 100%;
   animation: fadeOut 0.1s forwards 5s;
 }
 
-/* LINE 2 */
+/* Line 2 (desktop): type after 5.1s then fade out at ~7.3s */
 .line-2 {
   animation:
     typing 1s steps(20) 5.1s forwards,
     fadeOut 0.1s forwards 7.3s;
 }
 
-/* LINE 3 */
+/* Line 3 (desktop): type after 7.5s and remain visible */
 .line-3 {
   animation:
     typing 1.5s steps(30) 7.5s forwards;
 }
 
-/* Dots animation */
+/* Dots animation (keeps "..." animated) */
 .dots::after {
   content: '';
   animation: dotAnimation 1.5s infinite;
@@ -78,6 +84,7 @@ body {
 }
 
 @keyframes fadeOut {
+  from { opacity: 1; visibility: visible; }
   to { opacity: 0; visibility: hidden; }
 }
 
@@ -201,7 +208,8 @@ h1 {
 }
 
 /* =========================
-   MOBILE (SAFE FIX)
+   MOBILE FIXES
+   Keep desktop behavior but ensure lines stack and animate sequentially on phones
 ========================= */
 @media (max-width: 768px) {
 
@@ -213,16 +221,54 @@ h1 {
   }
 
   .display-container {
+    /* Let lines stack naturally on mobile */
+    position: relative;
     height: auto;
+    margin-top: 8px;
   }
 
+  /* On mobile we want lines stacked, but still animate from zero width.
+     Use position: relative and display:block so each line sits on its own row,
+     but keep overflow:hidden and width:0 initially so typing works. */
   .line {
-    position: relative;
-    width: auto;
+    position: relative !important;
+    display: block;
+    width: 0;
+    overflow: hidden;
     white-space: nowrap;
-    opacity: 1;
-    margin-bottom: 6px;
-    font-size: 12px;
+    opacity: 0;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-shadow:
+      0 0 1px rgba(50,74,50,1),
+      0 0 8px rgba(0,255,65,0.35);
+  }
+
+  /* Mobile timeline (sequential):
+     - line-1 types immediately, then fades out
+     - line-2 types after line-1 finished + short gap, then fades out
+     - line-3 types after line-2 finished and remains
+     These timings are tuned for mobile screen reading speeds. Adjust delays if you want them slower/faster. */
+  .line-1 {
+    animation:
+      typing 1.1s steps(30) 0s forwards,
+      fadeOut 0.12s forwards 3.2s;
+  }
+
+  .line-2 {
+    animation:
+      typing 1.1s steps(30) 3.35s forwards,
+      fadeOut 0.12s forwards 6.0s;
+  }
+
+  .line-3 {
+    animation:
+      typing 1.3s steps(40) 6.15s forwards;
+  }
+
+  /* Dots remain visible on mobile and animate */
+  .dots {
+    display: inline-block;
   }
 
   .clock {
@@ -264,5 +310,15 @@ h1 {
   .footer {
     white-space: nowrap;
     font-size: 13px;
+  }
+}
+
+/* Accessibility: if user prefers reduced motion, disable long animations */
+@media (prefers-reduced-motion: reduce) {
+  .line,
+  .dots::after {
+    animation: none !important;
+    opacity: 1 !important;
+    width: auto !important;
   }
 }
