@@ -426,14 +426,13 @@ h1 {
   }
 
   .email-box input {
-    width: 100%;
+    width: 70%;
     font-size: 13px;
     border-bottom: 1px solid #444;
   }
 
   .email-box button {
-    font-size: 8px;
-    display: flex;
+    font-size: 14px;
     color: #E1E1E1E5;
   }
 
