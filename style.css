@@ -426,7 +426,7 @@ h1 {
   }
 
   .email-box input {
-    width: 70%;
+    width: 100%;
     font-size: 13px;
     border-bottom: 1px solid #444;
   }
