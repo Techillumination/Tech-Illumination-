@@ -420,8 +420,7 @@ h1 {
 
   .email-box {
     flex-direction: column;
-    display: flex;
-    /* align-items: flex-start; */
+    align-items: flex-start;
     gap: 14px;
     margin-top: 28px;
   }
