@@ -241,7 +241,9 @@ h1 {
   }
 
   .clock {
-    padding-right: 160px;
+    right: 40px;      /* ← pin to right edge */
+    left: auto;       /* ← prevent any left offset interference */
+    padding-right: 0; /* ← remove the large padding causing drift */
     position: fixed;
   }
 }
