@@ -12,6 +12,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   line-height: 100px;
   overflow-x: hidden;
+  position: fixed;
 }
 
 .display-container {
