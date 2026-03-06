@@ -201,7 +201,7 @@ h1 {
 .email-box button {
   background: none;
   border: transparent;
-  color: #E1E1E14D;
+  color: rgba(225, 225, 225, 0.8);
   font-weight: 600;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   cursor: pointer;
@@ -242,6 +242,7 @@ h1 {
 
   .clock {
     padding-right: 160px;
+    position: fixed;
   }
 }
 
@@ -262,6 +263,7 @@ h1 {
     padding-right: 60px;
     padding-top: 67px;
     width: auto;
+    position: fixed;
   }
 
   h1 {
