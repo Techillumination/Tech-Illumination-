@@ -107,16 +107,15 @@ body {
 /* ── CLOCK — always fixed to top-right corner, never moves ── */
 .clock {
   position: fixed;
-  top: 69px;
-  right: 40px;
-  left: auto;          /* ← CRITICAL: prevents left from interfering */
-  width: auto;         /* ← no fixed width that causes drift */
-  font-size: 18px;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
   color: #324A32;
   z-index: 9999;
+  white-space: nowrap;
+
   text-shadow: 0 0 1px rgba(50, 74, 50, 1),
                0 0 10px rgba(0, 255, 65, 0.4);
-  /* No padding-right here — padding shifts visual position unpredictably */
 }
 
 .phase {
