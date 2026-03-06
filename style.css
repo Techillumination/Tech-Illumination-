@@ -103,21 +103,18 @@ body {
   max-width: 900px;
 }
 
-.clock {
-  color: #324A32;
-  font-size: 18.36px;
-  letter-spacing: 0%;
-  background: transparent;
+
+ .clock {
   position: fixed;
-  top: 20px;
-  right: 0;
-  height: 30px;
-  width: 87.27px;
-  padding-top: 67px;
-  padding-right: 300px;
+  top: 69px;
+  right: 40px;
+  font-size: 18px;
+  color: #324A32;
+  z-index: 9999;
   text-shadow: 0 0 1px rgba(50, 74, 50, 1),
                0 0 10px rgba(0, 255, 65, 0.4);
 }
+
 
 .phase {
   color: #FFFFFF66;
